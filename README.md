@@ -1,7 +1,7 @@
 Use this repository as a testing area, if and when you manage to either fix or create something that works well
 -then move it to the main repository
  
--In the future use the readme to prompt the only retarded programer(Peter) what you decided to change by creating a log in this readme
+-In the future use the readme to prompt the only retarded programer(Chris) what you decided to change by creating a log in this readme
 
 for example
 
@@ -28,5 +28,5 @@ looks at them. I should punish myself..
 
 -- Peter Pantalakos July 2015
 
-Figure this one out Chris! fix the text!
+
 
