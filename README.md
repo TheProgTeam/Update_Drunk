@@ -4,7 +4,7 @@ Testing_Grounds
 Use this repository as a testing area, if and when you manage to either fix or create something that works well
 then move it to the main repository
 
-In the future use the readme to prompt the next genius programer what you decided to change by creating a log in this readme
+In the future use the readme to prompt the next retarded programer(Like me) what you decided to change by creating a log in this readme
 
 for example
 
