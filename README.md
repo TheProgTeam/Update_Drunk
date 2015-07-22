@@ -9,7 +9,6 @@ In the future use the readme to prompt the next genius programer what you decide
 for example
 
 July 22 2015
-
 -Chris
 I added some for loops into our floormaker script in order to try to make the code generate barriers relative to the dimensions 
 we decide to use
