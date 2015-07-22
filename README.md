@@ -1,7 +1,7 @@
 Use this repository as a testing area, if and when you manage to either fix or create something that works well
 -then move it to the main repository
  
--In the future use the readme to prompt the only retarded programer(Peter) what you decided to change by creating a log in this readme
+-In the future use the readme to prompt your colleague with what you decided to change by creating a log in this readme
 
 for example
 
@@ -14,19 +14,7 @@ July 22 2015
 
 -Furthermore, I used two  new commands from c# in order to disregard the compilers warnings about using unreachable code
 
+Thanks Chris! Will do.
 
-
-
-
-
--PS. I really hate layers. I promise you Peter I will never use them. 
-
--- Chris Gallo July 2015
-
-PS. I wish would of taken Chris' advice about the godlike option of creating layers. Now I have forever ruined the way he 
-looks at them. I should punish myself.. 
-
--- Peter Pantalakos July 2015
-
-
-
+- Peter
+July 22 2015
