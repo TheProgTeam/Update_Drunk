@@ -26,4 +26,6 @@ Furthermore, I used two  new commands from c# in order to disregard the compiler
 
 
 
-PS. Layers will  prevail.
+PS. I really hate layers. I promise you Peter I will never use them. 
+
+- Chris Gallo July 2015
