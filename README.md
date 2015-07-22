@@ -29,7 +29,6 @@ Furthermore, I used two  new commands from c# in order to disregard the compiler
 PS. I really hate layers. I promise you Peter I will never use them. 
 
 - Chris Gallo July 2015
-- 
 
 PS. I wish would of taken Chris' advice about the godlike option of creating layers. Now I have forever ruined the way he 
 looks at them. I should punish myself.. 
