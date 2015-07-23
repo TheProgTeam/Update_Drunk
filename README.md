@@ -18,3 +18,10 @@ Thanks Chris! Will do.
 
 - Peter
 July 22 2015
+
+
+Drunkard walk algorithm is perfect and works flawlessly. Next step is to create character within grounds and add a bullet sprite as well.
+also need to make outter wall.
+
+- Peter & Chris 
+July 22 2015
