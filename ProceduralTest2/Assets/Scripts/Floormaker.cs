@@ -12,7 +12,7 @@ public class Floormaker : MonoBehaviour
 	public static int gridSizeX =25 ;
 	public static int gridSizeY= 25 ;
 	public static int maxTileCount =100;
-	public static int CURRENT_CASE = 337;
+	public static int CURRENT_CASE = 1;
 
 	public List <GameObject> wallTiles = new List <GameObject> ();
 	public List <GameObject> floorTiles = new List <GameObject> ();
@@ -56,35 +56,47 @@ public class Floormaker : MonoBehaviour
 		
 			for(int y = 0; y < gridSizeY; y++)
 
-			{
+			{	
+			
 				GameObject toInstantiate = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
 				wallTiles.Add (Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
 
+
 			}
 
 
 		}
 	}
-		void OutterBoardSetup()
-
+	void OuterWall()
 
 	{
-		for(int x=gridSizeX;x < gridSizeX+1;x++)
+		for(int x=-1;x <= gridSizeX;x++)
 		{
 			
-			for(int y = gridSizeY; y < gridSizeY+1; y++)
+			for(int y = -1; y <= gridSizeY; y++)
 				
-			{
-				GameObject toInstantiate = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
+			{	
+				if(x == -1 || x == gridSizeX|| y == -1 || y == gridSizeY)
 
-				GameObject instance = Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+				{
+					GameObject toInstantiate2 = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
+					GameObject instance = Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+				}
+			else
+				{
+				
+				}
 				
 			}
 			
 			
 		}
 
+
+
+
 	}
+
 
 
 
@@ -98,9 +110,7 @@ public class Floormaker : MonoBehaviour
 					
 				{
 				GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
-					GameObject instance =
-					Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
-				floorTiles.Add (instance);
+					floorTiles.Add (Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
 					
 				}
 				
@@ -260,12 +270,13 @@ public class Floormaker : MonoBehaviour
 
 	void Awake ()
 	{	
-		randtileAmount = Random.Range(250,400);
+		randtileAmount = Random.Range(250,500);
 		Debug.Log ("Random Tile Amount: "+randtileAmount);
 
 		BoardSetup();
 		FloorSetup();
 		DrunkWalk();
+		OuterWall();
 
 			//InitialiseList();
 			
