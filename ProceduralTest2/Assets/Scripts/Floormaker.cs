@@ -69,6 +69,38 @@ public class Floormaker : MonoBehaviour
 
 		}
 	}
+	void OuterWall()
+
+	{
+		for(int x=-1;x <= gridSizeX;x++)
+		{
+			
+			for(int y = -1; y <= gridSizeY; y++)
+				
+			{	
+				if(x == -1 || x == gridSizeX|| y == -1 || y == gridSizeY)
+
+				{
+					GameObject toInstantiate2 = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
+					GameObject instance = Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+				}
+			else
+				{
+				
+				}
+				
+			}
+			
+			
+		}
+
+
+
+
+	}
+
+
+
 
 	//Generates outer Boundary based on gridsize
 	void OuterWall()
