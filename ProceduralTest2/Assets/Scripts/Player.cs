@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 
-<<<<<<< HEAD
+
 namespace Scripts
 {
 public class Player : MonoBehaviour
@@ -27,11 +27,8 @@ public class Player : MonoBehaviour
 
 
 	}
-=======
-public class Player : Hitpoints
-	{
-		
-			
 
->>>>>>> origin/master
+
+
+
 }

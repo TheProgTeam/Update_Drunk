@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementNonRigid : MonoBehaviour {
+public class MovementNonRigid : Bullet {
 
 	float maxSpeed = 100f;
 	

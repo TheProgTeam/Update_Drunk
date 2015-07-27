@@ -47,10 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Boolean.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Bullet.cs" />
-=======
->>>>>>> origin/master
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\DrunkardWalk.cs" />
      <Compile Include="Assets\Scripts\EnemyLerp.cs" />
@@ -60,10 +57,7 @@
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\MovementNonRigid.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Weapons.cs" />
-=======
->>>>>>> origin/master
      <Compile Include="Assets\Scripts\checkfortrigger.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

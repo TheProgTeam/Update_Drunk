@@ -13,7 +13,7 @@ public class Bullet : Weapons {
 	
 	
 	
-	// Use this for initialization
+	 //Use this for initialization
 	void Start () 
 	{
 		Tragectory ();
@@ -45,12 +45,14 @@ public class Bullet : Weapons {
 	void OnCollisionEnter2D()
 	{
 
-		Destroy (bulletPrefab [0]);
+		Destroy (Projectile);
 
 
 
 
 	}
+
+
 
 
 

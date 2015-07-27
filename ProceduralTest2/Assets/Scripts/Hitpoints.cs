@@ -60,14 +60,10 @@ public class Hitpoints : MonoBehaviour
 		}
 	public virtual void OnCollisionEnter2D()
 	{
-		if(player.tag=="Player")
-		{
-			if(wall.tag!="Walls")
-			{
-				Hitpoints.LoseHipoints ();
-			}
 
-		
+		if(wall.tag=="Walls")
+		{
+
 		}
 		else
 		{

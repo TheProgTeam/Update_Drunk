@@ -103,7 +103,7 @@ public class Floormaker : MonoBehaviour
 
 
 	//Generates outer Boundary based on gridsize
-	void OuterWall()
+	/*void OuterWall()
 
 	{
 		for(int x=-1;x <= gridSizeX;x++)
@@ -132,7 +132,7 @@ public class Floormaker : MonoBehaviour
 
 
 	}
-
+*/
 
 
 	//Generates Floor tiles and stores them in a list
@@ -179,7 +179,7 @@ public class Floormaker : MonoBehaviour
 		{
 			
 			ChosenDir = Random.Range(0,4);
-			Debug.Log("Direction Chosen: "+ChosenDir);
+			//Debug.Log("Direction Chosen: "+ChosenDir);
 
 
 			
@@ -263,15 +263,15 @@ public class Floormaker : MonoBehaviour
 					randtileAmount++;
 					goto case 4;
 					}
-					Debug.Log ("I is:"+i);
+				//	Debug.Log ("I is:"+i);
 
 
 
 				}
 
-				Debug.Log ("Before Current:"+CURRENT_CASE);
+				//Debug.Log ("Before Current:"+CURRENT_CASE);
 				CURRENT_CASE +=1;
-				Debug.Log ("After Current:"+CURRENT_CASE);
+				//Debug.Log ("After Current:"+CURRENT_CASE);
 				Destroy(wallTiles[CURRENT_CASE]);
 				break;
 				//SOUTH
