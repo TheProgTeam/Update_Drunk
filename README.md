@@ -36,8 +36,7 @@ July 27 2015
 
 
 - 
-- List of Tasks
-- Drunkard Walk Algorithim
-- 
+- List of Tasks List of Tasks
+
 
 
