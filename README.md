@@ -1,3 +1,4 @@
+
 Use this repository as a testing area, if and when you manage to either fix or create something that works well
 -then move it to the main repository
  
@@ -31,5 +32,11 @@ is pointing at via player script. In the future we should add a bullet counter, 
 
 --Chris 
 July 27 2015
+
+
+
+- List of Tasks
+- Create Drunkard Walk Algorithim :1
+- 
 
 
