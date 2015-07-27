@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Floormaker.cs" />
      <Compile Include="Assets\Scripts\Hitpoints.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\MovementNonRigid.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\checkfortrigger.cs" />
  <Reference Include="UnityEngine.UI">

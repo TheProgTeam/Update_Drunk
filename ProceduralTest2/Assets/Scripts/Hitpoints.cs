@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Hitpoints : MonoBehaviour 
 {
-
-		public static int Hp;
+	[SerializeField]
+		public static int Hp =0;
 		public static float ivTimer = 0;
 		
 		private Transform findZwall;
-		public GameObject Wall;
+		public GameObject wall;
+		public GameObject player;
 
 		
 		
@@ -17,9 +18,8 @@ public class Hitpoints : MonoBehaviour
 		void Start ()
 		{
 			//initialize HP
-			Hp = 5;
-		findZwall = GameObject.FindGameObjectWithTag("Walls").transform;
-		findZwall = GetComponent<Transform>();
+			 Hp = 5;
+
 		//Wall = GameObject.FindGameObjectsWithTag("Walls");	
 			
 		}
@@ -46,7 +46,8 @@ public class Hitpoints : MonoBehaviour
 		{
 
 
-			if (ivTimer <= 0){
+			if (ivTimer <= 0)
+			{
 				
 				--Hp;
 				
@@ -57,18 +58,25 @@ public class Hitpoints : MonoBehaviour
 			
 			
 		}
-		void OnCollisionEnter2D()
+	public virtual void OnCollisionEnter2D()
 	{
-
-			if(Wall.tag=="Walls")
+		if(player.tag=="Player")
 		{
-			return;
-		}
+			if(wall.tag!="Walls")
+			{
+				Hitpoints.LoseHipoints ();
+			}
 
-		Hitpoints.LoseHipoints ();
 		
-		
+		}
+		else
+		{
+			Hitpoints.LoseHipoints ();
+		}
+		 
+			
 	}
+	
 		
 	}
 
