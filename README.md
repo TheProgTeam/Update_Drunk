@@ -36,7 +36,14 @@ July 27 2015
 
 
 - 
-- List of Tasks List of Tasks
+- List of Tasks 
+- Drunk walk algorithim (done)
+- Player Movement (Need to make movements more accurate)
+- Enemy Movement 
+- Enemy Mechanics
+- Weapons (Currently only pistol)
+- Bullet Mechanics (Very early stages of bullet generation is now a reality)
+
 
 
 
