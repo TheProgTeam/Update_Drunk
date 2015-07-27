@@ -1,23 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullet : Weapons {
+
+namespace Scripts
+{
+
+public class Bullet : Player {
 
 
 
 
 
 	//private Rigidbody2D Bu2D;
-	public GameObject[] bulletPrefab;
+	
+	private Rigidbody2D Boom;
+
+
 
 	
 	
-	
+
 	 //Use this for initialization
 	void Start () 
 	{
-		Tragectory ();
-		//Bu2D = GetComponent<Rigidbody2D> ();
+		Boom = GetComponent<Rigidbody2D> ();
+			Vector3 Starting_Pos = Camera.main.WorldToScreenPoint(transform.position);
+			Vector3 Dir = (Input.mousePosition - Starting_Pos).normalized;
+			Boom.AddForce (Dir*500);
 		
 	}
 
@@ -30,22 +39,30 @@ public class Bullet : Weapons {
 	void Update() {
 
 
+
+
 			
 		}
 
 	//Get Bullet path from Player script "Fire1" Button
-	void Tragectory()
+	public void Tragectory()
 	{
-		if (Physics.Raycast (ray))
+		/*if (Physics.Raycast (ray))
 			Instantiate (Projectile, ray.direction, Quaternion.identity);
 		Debug.Log (Projectile.transform.localPosition);
-		
+
+
+		*/
+
+
+
 	}
 
 	void OnCollisionEnter2D()
 	{
 
-		Destroy (Projectile);
+
+			Destroy (gameObject);
 
 
 
@@ -53,7 +70,7 @@ public class Bullet : Weapons {
 	}
 
 
-
+	}
 
 
 

@@ -4,12 +4,12 @@ using System.Collections;
 public class Weapons : MonoBehaviour {
 
 
-	public GameObject Projectile;
 
 
 
 
-	public Ray ray;
+
+	//public Ray ray;
 
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class Weapons : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+/*
 			if (Input.GetButtonDown("Fire1")) {
 				ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast (ray))
@@ -28,6 +28,6 @@ public class Weapons : MonoBehaviour {
 			Debug.Log (Projectile.transform.localPosition);
 				
 			}
-		
+*/		
 	}
 }
