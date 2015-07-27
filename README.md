@@ -35,8 +35,8 @@ July 27 2015
 
 
 
+- 
 - List of Tasks
-- Create Drunkard Walk Algorithim :1
 - 
 
 
