@@ -44,7 +44,12 @@ July 27 2015
 - Weapons (Currently only pistol)
 - Bullet Mechanics (Very early stages of bullet generation is now a reality)
 - Hitpoint Script(Done)
+- HUD
+- Pause menu
+- Start menu
+- Stats board
+
 
 Edited by Peter Pantelakos
-July 27 2015
+July 28 2015
 
