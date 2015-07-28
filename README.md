@@ -48,6 +48,8 @@ July 27 2015
 - Pause menu
 - Start menu
 - Stats board
+- Boss
+- Level Sequence
 
 
 Edited by Peter Pantelakos
