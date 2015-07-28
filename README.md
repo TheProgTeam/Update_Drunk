@@ -43,7 +43,9 @@ July 27 2015
 - Enemy Mechanics
 - Weapons (Currently only pistol)
 - Bullet Mechanics (Very early stages of bullet generation is now a reality)
+- Hitpoint Script(Done)
+-
 
-
-
+Edited by Peter Pantelakos
+July 27 2015
 
