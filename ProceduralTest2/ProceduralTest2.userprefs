@@ -1,17 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Hitpoints.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy.cs" Line="19" Column="2" />
       <File FileName="Assets\Scripts\EnemyLerp.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Hitpoints.cs" Line="34" Column="4" />
-      <File FileName="Assets\Scripts\MovementNonRigid.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Weapons.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Floormaker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Hitpoints.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="55" Column="5" />
+      <File FileName="Assets\Scripts\Player.cs" Line="28" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

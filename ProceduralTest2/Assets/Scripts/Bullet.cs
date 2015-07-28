@@ -45,7 +45,7 @@ public class Bullet : Player {
 		}
 
 	//Get Bullet path from Player script "Fire1" Button
-	public void Tragectory()
+	public void Trajectory()
 	{
 		/*if (Physics.Raycast (ray))
 			Instantiate (Projectile, ray.direction, Quaternion.identity);
@@ -68,6 +68,17 @@ public class Bullet : Player {
 
 
 	}
+		
+		void OnTriggerEnter2D()
+		{
+			
+			
+			Destroy (gameObject);
+			
+			
+			
+			
+		}
 
 
 	}

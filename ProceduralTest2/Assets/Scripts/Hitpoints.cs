@@ -3,81 +3,81 @@ using System.Collections;
 
 public class Hitpoints : MonoBehaviour 
 {
-	[SerializeField]
-		public static int Hp =0;
-		public static float ivTimer = 0;
+
+		public  int Hp =0;
+		public  float ivTimer = 0;
+
 		
-		private Transform findZwall;
-		public GameObject wall;
-		//public GameObject player;
-		//public GameObject enemy;
-		//GameObject asshole = GameObject.FindGameObjectWithTag("Player")
-		
-		
-		
+		 
 		// Use this for initialization
 		void Start ()
 		{
 			//initialize HP
 			 Hp = 5;
-		ivTimer = 5;
-
-		//Wall = GameObject.FindGameObjectsWithTag("Walls");	
-			
+	
 		}
 		
 		// Update is called once per frame
 		void Update ()
 		{
 
-
+		//Ivtimer I set in the inspector and if it is 5 then it is not player therefore IVTIMER will not work
+		if (ivTimer!=5)
+		{
 			ivTimer -= Time.deltaTime;
-			//Debug.Log (ivTimer);
-			if (Hp == 0) 
-			{
-				Destroy (gameObject);
-			}
-			
-			
+
+		}
+		if (Hp == 0) 
+		{
+			Destroy (gameObject);
+		}	
 			
 			
 		}
 		
 		
-		public static void LoseHipoints()
+		
+
+
+	public  void LoseHipoints()
 		{
 
-
-			if (ivTimer <= 0)
-			{
-				
-				--Hp;
-				
-				Debug.Log ("Hotpoints equals= " +Hp);
-				ivTimer = 1f;
-				
-			}
+		if (ivTimer <= 0)
+		{
 			
+			--Hp;
+			
+			Debug.Log ("Player HP: " +Hp);
+			ivTimer = 0.5f;
 			
 		}
-	public virtual void OnCollisionEnter2D()
+			
+
+		//IVtimer 5 will make the invulnerability timer not work when set in inspector
+			if (ivTimer ==5)
+			{
+
+			--Hp;
+			Debug.Log ("HP: " +Hp);
+			}
+
+			
+		}
+	public  void OnCollisionEnter2D(Collision2D collision)
 	{
-
-		if(wall.tag=="Walls")
-		{
-
-		}
-
-
-		/*
-		else
-		{
-			Hitpoints.LoseHipoints ();
-		}
-		 
-		*/	
-	}
+		//This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
 	
-		
-	}
+			if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player")
+		{
+	
+			return;
 
+		
+		}
+		LoseHipoints();
+
+	}
+}
+		 
+
+	

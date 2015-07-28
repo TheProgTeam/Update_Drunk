@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-	
+	/*
 	[SerializeField]
 	public static int Hp_enemy =0;
 
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 
-	public static void LoseHipoints1()
+	public static void LoseHipoints()
 	{
 			--Hp_enemy;
 			Debug.Log ("Enemy Hitpoints = " +Hp_enemy);
@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour {
 		if (bullet.tag == "Bullet") 
 		{
 		
-			Hitpoints.LoseHipoints();
+			LoseHipoints();
 
 		
 		}
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour {
 		}
 		
 
-	}
+	}*/
 }
 
 
