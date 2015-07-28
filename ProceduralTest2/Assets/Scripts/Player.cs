@@ -14,10 +14,13 @@ public class Player : MonoBehaviour
 		//public Vector3 Dir;
 
 
+
 		void Start()
 		{
 			Current_Pos = GetComponent<Transform>();
 			Pl2D = GetComponent <Rigidbody2D> ();
+			Instantiate (weapon[0],Current_Pos.position, Quaternion.identity);
+
 
 
 

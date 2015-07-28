@@ -15,8 +15,7 @@ public class Bullet : Player {
 	
 	private Rigidbody2D Boom;
 
-
-
+	
 	
 	
 
@@ -37,6 +36,7 @@ public class Bullet : Player {
 	//If bullet hits either object tagged with wall or enemy destroy bullet object
 
 	void Update() {
+			
 
 
 

@@ -34,7 +34,7 @@ public class EnemyLerp:Movement
 		void Update()
 		{
 
-			GameObject asshole = GameObject.FindGameObjectWithTag("Follow");
+			GameObject asshole = GameObject.FindGameObjectWithTag("Player");
 			Target =asshole.transform;
 			Vector2 posa = asshole.transform.position;
 			if (asshole ==  true) {

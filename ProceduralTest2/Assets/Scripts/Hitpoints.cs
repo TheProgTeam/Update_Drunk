@@ -9,8 +9,9 @@ public class Hitpoints : MonoBehaviour
 		
 		private Transform findZwall;
 		public GameObject wall;
-		public GameObject player;
-
+		//public GameObject player;
+		//public GameObject enemy;
+		//GameObject asshole = GameObject.FindGameObjectWithTag("Player")
 		
 		
 		
@@ -19,6 +20,7 @@ public class Hitpoints : MonoBehaviour
 		{
 			//initialize HP
 			 Hp = 5;
+		ivTimer = 5;
 
 		//Wall = GameObject.FindGameObjectsWithTag("Walls");	
 			
@@ -65,12 +67,15 @@ public class Hitpoints : MonoBehaviour
 		{
 
 		}
+
+
+		/*
 		else
 		{
 			Hitpoints.LoseHipoints ();
 		}
 		 
-			
+		*/	
 	}
 	
 		

@@ -62,10 +62,10 @@ public class Movement : MonoBehaviour {
 
 
 		}
-		void currentposss()
-		{
+		//void currentposss()
+		//{
 
-		}
+		//}
 
 
 		//Vector3  Peter = transform.eulerAngles;
