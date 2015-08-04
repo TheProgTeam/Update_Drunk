@@ -55,3 +55,11 @@ July 27 2015
 Edited by Peter Pantelakos
 July 28 2015
 
+ - Added 2 new scipts (Enemy_Movement, and Enemy_1)
+ - Also included a new method in Hitpoints script (OnTriggerEnter2D), which only effects gameobjects with rigidbodies with on trigger selected
+ - Added new layer Player
+ - Added a rigidbody to Boss_0
+
+Edited by Chris Gallo
+August 4 2015
+
