@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Boids Model\Assets\Scripts\BoidSpawner.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy_1.cs">
     <Files>
-      <File FileName="..\Boids Model\Assets\Scripts\BoidSpawner.cs" Line="49" Column="36" />
+      <File FileName="Assets\Scripts\Player.cs" Line="22" Column="70" />
+      <File FileName="..\Boids Model\Assets\Scripts\BoidSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyMovement.cs" Line="35" Column="1" />
+      <File FileName="Assets\Scripts\Enemy_1.cs" Line="18" Column="23" />
+      <File FileName="Assets\Scripts\Hitpoints.cs" Line="86" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

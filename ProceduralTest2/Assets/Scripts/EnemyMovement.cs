@@ -1,12 +1,21 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class EnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
 
-	//Vector2 enemyStartDirection = new Vector2();
-	//Vector2	enemyFinalDirection = new Vector2();
+	[HideInInspector]
+	public bool isFacingRight = false;
+	public float maxSpeed = 1.5f;
 
+	public void Flip()
+	{
+		isFacingRight = !isFacingRight;
+		Vector3 enemyScale = this.transform.localScale;
+		enemyScale.x = enemyScale.x * -1;
+		this.transform.localScale = enemyScale;
+
+	}
 
 
 
