@@ -3,11 +3,16 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+	//In order not to see these variables in the children of enemy movement I used the following
 	[HideInInspector]
 	public bool isFacingRight = false;
 	public float maxSpeed = 1.5f;
 
+
+
+
+	//The Flip function inverts the value of isfacingright bool and then flips the transform of the enemy
+	//Game Object
 	public void Flip()
 	{
 		isFacingRight = !isFacingRight;
@@ -17,18 +22,6 @@ public class EnemyMovement : MonoBehaviour
 
 	}
 
-
-
-	// Use this for initialization
-	void Start ()
-	{
 	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
 }
 
