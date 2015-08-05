@@ -77,6 +77,21 @@ public class Hitpoints : MonoBehaviour
 		LoseHipoints();
 
 	}
+   
+    public  void OnCollisionStay2D(Collision2D collision)
+    {
+        //This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
+        
+        if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player")
+        {
+            
+            return;
+            
+            
+        }
+        LoseHipoints();
+        
+    }
 
 //Since we use hitpoints script to change hitpoints on enemies through the use of the ontrigger option on the gameobjects being instantiated
 public  void OnTriggerEnter2D(Collider2D collider)

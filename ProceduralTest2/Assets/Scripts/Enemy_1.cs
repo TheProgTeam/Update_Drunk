@@ -7,6 +7,7 @@ public class Enemy_1 : EnemyMovement {
 	private Rigidbody2D E_1;
 
 
+
 	//Get the components of the rigidbody attached to enemy
 	void Start()
 	{
@@ -29,19 +30,20 @@ public class Enemy_1 : EnemyMovement {
 		}
 	}
 
-	//Checking for collisons with box collider
-	void OnTriggerEnter2D (Collider2D collider)
-		
-	{
+    void OnCollisionEnter2D(Collision2D collider)
+        
+    {
+        if (collider.collider.tag == "Walls" || collider.collider.tag == "Player")
+        {
+            Flip();
+            
+        }
+        
+        
+    }
+   
 
-		if (collider.tag == "Walls")
-		{
-			Flip();
-		
-		}
-
-
-	}
+	
 
 
 }
