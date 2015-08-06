@@ -5,7 +5,18 @@ using System.Collections;
 public class Enemy_1 : EnemyMovement {
 
 	private Rigidbody2D E_1;
+    private Transform E_1T;
 
+    /*
+    These Are the variables that we can use in this enemy+
+    
+    public float maxSpeed = 1.5f;
+    public Transform Player;
+    public float MaxDist = 10f;
+    public float MinDist = 2f;
+    private float Dist;
+
+     */
 
 
 	//Get the components of the rigidbody attached to enemy
@@ -13,21 +24,46 @@ public class Enemy_1 : EnemyMovement {
 	{
 
 		E_1 = GetComponent<Rigidbody2D> ();
+        E_1T = GetComponent<Transform> ();
+
+
 	}
 
 	//checking if there is wall, and the enemy is facing the opposite direction
 	void FixedUpdate()
 	{
-		if (this.isFacingRight == true) {
+        //In order not to have Unity scream at me and hurt my feelings I check if there is an object (Player) 
+        if(Player != null)
+        {
+            //Dist is used to calculate the distance between the player and the enemy 
+        Dist= Vector2.Distance(transform.position, Player.position);
+            //if and only if dist is less than min distance I make the enemy lerp using the MoveTowords method. Its similar to lerp but has an extra argument in it to slow down the movement
+        if(Dist < MinDist)
+        {
+
+           
+                transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y), Player.position, maxSpeed * Time.deltaTime);
+            
+        }
+
+
+        else
+        
+          if (this.isFacingRight == true) 
+            {
 			this.E_1.velocity =
 				new Vector2 (maxSpeed, E_1.velocity.y);
 
-		} else {
+		    } 
+            else {
 			this.E_1.velocity =
 				new Vector2 (maxSpeed * -1, this.E_1.velocity.y);
 
 
 		}
+        }
+
+
 	}
 
     void OnCollisionEnter2D(Collision2D collider)

@@ -7,7 +7,12 @@ public class EnemyMovement : MonoBehaviour
 	[HideInInspector]
 	public bool isFacingRight = false;
 	public float maxSpeed = 1.5f;
+    public Transform Player;
+    public float MaxDist = 10f;
+    public float MinDist = 2f;
+    public float Dist;
 
+    
 
 
 
@@ -20,8 +25,19 @@ public class EnemyMovement : MonoBehaviour
 		enemyScale.x = enemyScale.x * -1;
 		this.transform.localScale = enemyScale;
 
+
 	}
 
+    void Start()
+    {
+
+    }
+    void Update()
+
+    {
+
+
+    }
 
 	
 }
