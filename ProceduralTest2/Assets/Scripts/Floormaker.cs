@@ -306,7 +306,7 @@ public class Floormaker : MonoBehaviour
 
 	void Awake ()
 	{	
-		randtileAmount = Random.Range(250,500);
+		randtileAmount = Random.Range(500,1000);
 		Debug.Log ("Random Tile Amount: "+randtileAmount);
 
 		BoardSetup();

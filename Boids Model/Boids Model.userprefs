@@ -1,13 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\ProceduralTest2\Assets\Scripts\Bullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\ProceduralTest2\Assets\Scripts\EnemyMovement.cs">
     <Files>
-      <File FileName="..\ProceduralTest2\Assets\Scripts\Movement.cs" Line="1" Column="1" />
-      <File FileName="..\ProceduralTest2\Assets\Scripts\Bullet.cs" Line="55" Column="5" />
-      <File FileName="..\ProceduralTest2\Assets\Scripts\Enemy.cs" Line="1" Column="1" />
-      <File FileName="..\ProceduralTest2\Assets\Scripts\Enemy_1.cs" Line="46" Column="2" />
-      <File FileName="..\ProceduralTest2\Assets\Scripts\EnemyMovement.cs" Line="24" Column="5" />
-      <File FileName="..\ProceduralTest2\Assets\Scripts\Hitpoints.cs" Line="81" Column="29" />
+      <File FileName="..\ProceduralTest2\Assets\Scripts\Hitpoints.cs" Line="50" Column="34" />
+      <File FileName="..\ProceduralTest2\Assets\Scripts\Enemy_1.cs" Line="52" Column="107" />
+      <File FileName="..\ProceduralTest2\Assets\Scripts\EnemyMovement.cs" Line="25" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

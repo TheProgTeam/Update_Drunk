@@ -48,7 +48,7 @@ public class Hitpoints : MonoBehaviour
 			--Hp;
 			
 			Debug.Log ("Player HP: " +Hp);
-			ivTimer = 0.5f;
+			ivTimer = 1f;
 			
 		}
 			
