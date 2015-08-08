@@ -63,3 +63,12 @@ July 28 2015
 Edited by Chris Gallo
 August 4 2015
 
+-Added more information to Enemy_2 Script
+-Square Patrol pattern added
+-exceptions must be added to Enemy_2 script in order to deal with collisions and bad intial positions
+
+Edited by Chris Gallo
+
+August 8 2015
+
+
