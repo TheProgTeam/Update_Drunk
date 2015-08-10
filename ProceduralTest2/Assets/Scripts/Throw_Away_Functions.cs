@@ -129,10 +129,66 @@ public class Throw_Away_Functions : MonoBehaviour {
 
            
      }
-     * 
-     * 
-     * 
-     * 
+     //Generates outer Boundary based on gridsize
+    /*void OuterWall()
+
+    {
+        for(int x=-1;x <= gridSizeX;x++)
+        {
+            
+            for(int y = -1; y <= gridSizeY; y++)
+                
+            {   
+                if(x == -1 || x == gridSizeX || y == -1 || y == gridSizeY)
+
+                {
+                    GameObject toInstantiate2 = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
+                    GameObject instance = Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+                }
+            else
+                {
+                
+                }
+                
+            }
+            
+            
+        }
+
+
+
+
+    }
+*/
+    
+    
+    
+    /*//Generates Floor tiles and stores them in a list
+    void FloorSetup ()
+    {
+        
+        for(int x=0;x < gridSizeX;x++)
+        {
+            
+            for(int y = 0; y < gridSizeY; y++)
+                
+            {
+                GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                floorTiles.Add (Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
+                
+                
+            }
+            
+            
+        }
+        
+        
+    }
+
+        * 
+            * 
+            * 
+            * 
 
 */
 

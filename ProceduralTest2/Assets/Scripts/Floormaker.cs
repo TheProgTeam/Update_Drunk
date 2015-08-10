@@ -13,9 +13,8 @@ public class Floormaker : MonoBehaviour
 	public static int gridSizeY= 25 ;
 	public static int maxTileCount =100;
 	public static int CURRENT_CASE = 1;
-
-	public List <GameObject> wallTiles = new List <GameObject> ();
-	public List <GameObject> floorTiles = new List <GameObject> ();
+   
+    public List <GameObject> multiTiles = new List <GameObject>();
 	public List <Vector3> gridPositions = new List <Vector3> ();
 
 	
@@ -61,7 +60,7 @@ public class Floormaker : MonoBehaviour
 			{	
 			
 				GameObject toInstantiate = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
-				wallTiles.Add (Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
+				multiTiles.Add (Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
 
 
 			}
@@ -102,66 +101,14 @@ public class Floormaker : MonoBehaviour
 
 
 
-	//Generates outer Boundary based on gridsize
-	/*void OuterWall()
-
-	{
-		for(int x=-1;x <= gridSizeX;x++)
-		{
-			
-			for(int y = -1; y <= gridSizeY; y++)
-				
-			{	
-				if(x == -1 || x == gridSizeX || y == -1 || y == gridSizeY)
-
-				{
-					GameObject toInstantiate2 = wallPrefabTiles[Random.Range(0,wallPrefabTiles.Length)];
-					GameObject instance = Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
-				}
-			else
-				{
-				
-				}
-				
-			}
-			
-			
-		}
-
-
-
-
-	}
-*/
-
-
-	//Generates Floor tiles and stores them in a list
-		void FloorSetup ()
-		{
-			
-			for(int x=0;x < gridSizeX;x++)
-			{
-				
-				for(int y = 0; y < gridSizeY; y++)
-					
-				{
-				GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
-					floorTiles.Add (Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
-					
-				}
-				
-				
-			}
-
-
-	}
+	
 
 		
 	void StartingPos()
 	{	
 
 
-		//Destroy (wallTiles[550]);
+		//Destroy (multiTiles[550]);
 		 
 
 
@@ -173,7 +120,10 @@ public class Floormaker : MonoBehaviour
 
 	void DrunkWalk()
 	{
-		Destroy(wallTiles[CURRENT_CASE]);
+        GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+        Destroy(multiTiles[CURRENT_CASE]);
+        multiTiles.Add (Instantiate (toInstantiate2,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
+
 		
 		for(int x = 0;x<=randtileAmount;x++)
 		{
@@ -214,8 +164,13 @@ public class Floormaker : MonoBehaviour
 					randtileAmount++;
 					goto case 4;
 				}
+                    GameObject toInstantiate3 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                    multiTiles.Add (Instantiate (toInstantiate3,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
+				Destroy(multiTiles[CURRENT_CASE]);
+                  
 
-				Destroy(wallTiles[CURRENT_CASE]);
+                    //GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                    //floorTiles.Add (Instantiate (toInstantiate2, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject);
 				break;
 
 
@@ -248,8 +203,9 @@ public class Floormaker : MonoBehaviour
 					randtileAmount++;
 					goto case 4;
 				}
-
-				Destroy(wallTiles[CURRENT_CASE]);
+                    GameObject toInstantiate4 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                    multiTiles.Add (Instantiate (toInstantiate4,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
+				Destroy(multiTiles[CURRENT_CASE]);
 				break;
 				//NORTH
 			case 2:
@@ -269,10 +225,11 @@ public class Floormaker : MonoBehaviour
 
 				}
 
-				//Debug.Log ("Before Current:"+CURRENT_CASE);
+				
 				CURRENT_CASE +=1;
-				//Debug.Log ("After Current:"+CURRENT_CASE);
-				Destroy(wallTiles[CURRENT_CASE]);
+                    GameObject toInstantiate5 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                    multiTiles.Add (Instantiate (toInstantiate5,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
+				Destroy(multiTiles[CURRENT_CASE]);
 				break;
 				//SOUTH
 			case 3:
@@ -289,7 +246,9 @@ public class Floormaker : MonoBehaviour
 				}
 
 				CURRENT_CASE -=1;
-				Destroy(wallTiles[CURRENT_CASE]);
+                    GameObject toInstantiate6 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+                    multiTiles.Add (Instantiate (toInstantiate6,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
+				Destroy(multiTiles[CURRENT_CASE]);
 				break;	
 
 			case 4:
@@ -306,11 +265,10 @@ public class Floormaker : MonoBehaviour
 
 	void Awake ()
 	{	
-		randtileAmount = Random.Range(500,1000);
+		randtileAmount = Random.Range(750,1250);
 		Debug.Log ("Random Tile Amount: "+randtileAmount);
 
 		BoardSetup();
-		FloorSetup();
 		DrunkWalk();
 		OuterWall();
 

@@ -43,8 +43,8 @@ public class Enemy_2 : EnemyMovement
 
 
     //Dimensions of square
-    public int dimX = 5;
-    public int dimY = 5;
+    private int dimX = 2;
+    private int dimY = 2;
 
 
 
@@ -173,12 +173,21 @@ public class Enemy_2 : EnemyMovement
         if (collider.collider.tag == "Walls"||collider.collider.tag == "Enemy")
         {
             Flip();
+
+
+            first_Pos = new Vector3(this.transform.position.x,this.transform.position.y,0);
+            second_Pos = new Vector3(this.transform.position.x+ dimX, this.transform.position.y,0);
+            third_Pos = new Vector3(this.transform.position.x+ dimX,this.transform.position.y - dimY,0);
+            fourth_Pos = new Vector3(this.transform.position.x,this.transform.position.y - dimY,0);
+
             
         }
+
+
         
         
     }
 
-
+   
 
 }

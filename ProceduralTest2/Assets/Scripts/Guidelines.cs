@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Guidlines : MonoBehaviour {
+public class Guidelines : MonoBehaviour {
 
     /*--------------------------------------------------------------------------------------------------------------------------
      * Hello Chris or Peter
@@ -29,7 +29,10 @@ public class Guidlines : MonoBehaviour {
      * 
      * 
      * 
+     * 
+     * 
+     * 
+     * 
      *----------------------------------------------------------------------------------------------------------------------------*/
-
 
 }
