@@ -29,7 +29,7 @@ public class Hitpoints : MonoBehaviour
 		}
 		if (Hp == 0) 
 		{
-			Destroy (gameObject);
+            gameObject.SetActive (false);
 		}	
 			
 			
@@ -108,6 +108,7 @@ public  void OnTriggerEnter2D(Collider2D collider)
 	LoseHipoints();
 	
 }
+
 
 }
 	

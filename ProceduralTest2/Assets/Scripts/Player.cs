@@ -8,7 +8,7 @@ namespace Scripts
 public class Player : MonoBehaviour
 	{
 		private Transform Current_Pos;
-		public GameObject [] weapon;
+		//public GameObject [] weapon;
 		private Rigidbody2D Pl2D;
 		public GameObject[] bulletPrefab1;
 		//public Vector3 Dir;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 		{
 			Current_Pos = GetComponent<Transform>();
 			Pl2D = GetComponent <Rigidbody2D> ();
-			Instantiate (weapon[0],Current_Pos.position, Quaternion.identity);
+			//Instantiate (weapon[0],Current_Pos.position, Quaternion.identity);
 
 
 
