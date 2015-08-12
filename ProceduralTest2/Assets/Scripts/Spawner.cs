@@ -11,6 +11,9 @@ public class Spawner : Floormaker {
     public List <GameObject> enemyDiag = new List <GameObject> ();
     public List <GameObject> enemyRand = new List <GameObject> ();
 
+
+
+
     private int findFloor;
     private GameObject peter;
 
@@ -28,21 +31,24 @@ public class Spawner : Floormaker {
 
     //enemy has to take in the level
 
-   /* void Enemy1Spawner()
+   void Enemy1Spawner()
     {
-
+        /*
 
         findFloor = Random.Range(0, randtileAmount);
        // multiTiles[findFloor] =  
         if (multiTiles[findFloor].CompareTag("Floors"))
         {
-
+            if(gridSizeX + findFloor ))
+            { 
+                Instantiate (enemyPatrol[0],multiTiles[findFloor].transform, Quaternion.identity);
+            }
 
 
         }
 
-
+        */
     }
 
-*/
+
 }

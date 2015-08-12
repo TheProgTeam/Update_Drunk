@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
+
 public class Floormaker : MonoBehaviour 
 {
 
@@ -120,9 +121,9 @@ public class Floormaker : MonoBehaviour
 
 	void DrunkWalk()
 	{
-        Destroy(multiTiles [0]);
-        GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
-        multiTiles[CURRENT_CASE] =(Instantiate (toInstantiate2,multiTiles[0].transform.position , Quaternion.identity) as GameObject);
+        //Destroy(multiTiles [0]);
+       // GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+       // multiTiles[CURRENT_CASE] =(Instantiate (toInstantiate2,multiTiles[0].transform.position , Quaternion.identity) as GameObject);
 
 
 		
@@ -131,34 +132,32 @@ public class Floormaker : MonoBehaviour
             clickclack ++;
             ChosenDir = Random.Range(0,4);
 			//Debug.Log("Direction Chosen: "+ChosenDir);
+           
 
 
-			
+			//Debug.Log(ChosenDir);
+
 
 			switch (ChosenDir)
 			{
 				//WEST
-			case 0:
+			case 1:
 
 
 				//For loop checks to see if number goes past the barrier to the left. If it does, stop and revert number
-				for (int i=0;i<gridSizeX-1;i++)
+				for (int i=0;i<gridSizeX;i++)
 				{
 
-					if ((CURRENT_CASE-(gridSizeX)) <i) 
-					
-					
+					if ((CURRENT_CASE-(gridSizeX)) <0) 
 					{
-					
-					goto case 4;
+
+                            goto case 4;
 					}
 						
 
 				}
-
-
-
-				CURRENT_CASE -=gridSizeX;
+                    CURRENT_CASE -=gridSizeX;  
+				
 				if (CURRENT_CASE<=0)
 				{
 					CURRENT_CASE=+gridSizeX;
@@ -175,7 +174,7 @@ public class Floormaker : MonoBehaviour
 
 
 				//EAST
-			 case 1:
+			 case 0:
 				//Case 1 goes right therefore we want our for loop to start at the element which is at the bottom of the last row and stop at the last element generated
 
 				for( int i = ((gridSizeX*gridSizeX)-gridSizeX);i<=(gridSizeX*gridSizeX-1);i++)
@@ -247,7 +246,7 @@ public class Floormaker : MonoBehaviour
 
 				}
 
-				CURRENT_CASE -=1;
+				CURRENT_CASE --;
                     GameObject toInstantiate6 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
                     Destroy(multiTiles[CURRENT_CASE]);
                     multiTiles[CURRENT_CASE] = (Instantiate (toInstantiate6,multiTiles[CURRENT_CASE].transform.position , Quaternion.identity) as GameObject);
@@ -256,12 +255,14 @@ public class Floormaker : MonoBehaviour
 				break;	
 
 			case 4:
-                randtileAmount++;
+               randtileAmount++;
 
 				break;
 				
 
 			}
+
+
 		}
 		
 	}
