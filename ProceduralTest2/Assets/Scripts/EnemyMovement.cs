@@ -7,13 +7,11 @@ public class EnemyMovement : MonoBehaviour
 	[HideInInspector]
 	public bool isFacingRight = false;
 	public float maxSpeed = 1.5f;
-    public Transform Player;
+
     public float MaxDist = 10f;
     public float MinDist = 2f;
     public float Dist;
-
-    
-
+    public Transform Player;
 
 
 	//The Flip function inverts the value of isfacingright bool and then flips the transform of the enemy

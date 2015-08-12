@@ -32,6 +32,7 @@ public class Enemy_1 : EnemyMovement {
 	//checking if there is wall, and the enemy is facing the opposite direction
 	void FixedUpdate()
 	{
+       
         Patrol();
         //In order not to have Unity scream at me and hurt my feelings I check if there is an object (Player) 
         if (Player != null)
