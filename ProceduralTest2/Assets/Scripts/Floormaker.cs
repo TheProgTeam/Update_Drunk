@@ -149,6 +149,11 @@ public class Floormaker : MonoBehaviour
 				{
 
 					if ((CURRENT_CASE-(gridSizeX)) <0) 
+
+
+					
+					
+
 					{
 
                             goto case 4;
@@ -271,13 +276,13 @@ public class Floormaker : MonoBehaviour
 
 	void Awake ()
 	{	
-        randtileAmount = Random.Range(1000,1000);
+        randtileAmount = Random.Range(1500,2000);
 		Debug.Log ("Random Tile Amount: "+randtileAmount);
 
 		BoardSetup();
 		DrunkWalk();
 		OuterWall();
-        Debug.Log(clickclack);
+       
 
 			//InitialiseList();
 			
