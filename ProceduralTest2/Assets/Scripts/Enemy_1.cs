@@ -22,7 +22,7 @@ public class Enemy_1 : EnemyMovement {
 	//Get the components of the rigidbody attached to enemy
 	void Start()
 	{
-
+       
 		E_1 = GetComponent<Rigidbody2D> ();
         //E_1T = GetComponent<Transform> ();
 
@@ -34,30 +34,40 @@ public class Enemy_1 : EnemyMovement {
 	{
        
         Patrol();
-        //In order not to have Unity scream at me and hurt my feelings I check if there is an object (Player) 
-        if (Player != null)
-        {
-           
-            //Dist is used to calculate the distance between the player and the enemy 
-            Dist = Vector2.Distance(transform.position, Player.position);
-            //if and only if dist is less than min distance I make the enemy lerp using the MoveTowords method. Its similar to lerp but has an extra argument in it to slow down the movement
-            if (Dist < MinDist)
-            {
-                /*Quaternion rotation = Quaternion.LookRotation
-                    (Player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-                transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);*/
+        Chase();
 
 
-
-             transform.position = Vector2.MoveTowards(transform.position, Player.position, maxSpeed * Time.deltaTime);
-                if(transform.position.x-Player.position.x<0 || transform.position.x > Player.position.x) Flip();
-                
-                
-               
-            }
-        }
+       
         
     }
+
+    void Chase()
+    {
+        //In order not to have Unity scream at me and hurt my feelings I check if there is an object (Player) 
+        if (Player != null)
+    {
+        
+        //Dist is used to calculate the distance between the player and the enemy 
+        Dist = Vector2.Distance(transform.position, Player.position);
+        //if and only if dist is less than min distance I make the enemy lerp using the MoveTowords method. Its similar to lerp but has an extra argument in it to slow down the movement
+        if (Dist < MinDist)
+        {
+            /*Quaternion rotation = Quaternion.LookRotation
+                    (Player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+                transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);*/
+            
+            
+            
+            transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, maxSpeed * Time.deltaTime);
+            if(transform.position.x-Player.transform.position.x<0 || transform.position.x > Player.transform.position.x) Flip();
+            
+            
+            
+        }
+    }
+    }
+    
+
     //new Vector2(transform.position.x, transform.position.y)
 
      void Patrol()

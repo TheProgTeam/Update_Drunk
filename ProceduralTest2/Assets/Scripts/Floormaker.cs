@@ -15,7 +15,7 @@ public class Floormaker : MonoBehaviour
 	public static int maxTileCount =100;
 	public static int CURRENT_CASE = 0;
    
-    public List <GameObject> multiTiles = new List <GameObject>();
+    public static List <GameObject> multiTiles = new List <GameObject>();
 	public List <Vector3> gridPositions = new List <Vector3> ();
 
     public int clickclack = 0;
@@ -29,20 +29,6 @@ public class Floormaker : MonoBehaviour
 
 	public GameObject[] wallPrefabTiles;
 	public GameObject[] floorPrefabTiles;
-
-
-
-    public List <GameObject> enemyPatrol = new List <GameObject> ();
-    public List <GameObject> enemyBox = new List <GameObject> ();
-    public List <GameObject> enemyDiag = new List <GameObject> ();
-    public List <GameObject> enemyRand = new List <GameObject> ();
-    
-    
-
-    
-    private int enemyNum = 2;
-    private int findFloor;
-
 
 
 
@@ -292,51 +278,6 @@ public class Floormaker : MonoBehaviour
 
 
 
-    //enemySpawner
-
-    void Enemy1Spawner(int enemyTot)
-    {
-        
-        for(int i=0; i<enemyTot;i++)
-        {
-            findFloor = Random.Range(0, 625);
-            // multiTiles[findFloor] =  
-            if (multiTiles[findFloor].CompareTag("Floors"))
-            {
-                
-                
-                if(multiTiles[findFloor+gridSizeX].CompareTag("Floors"))
-                { 
-                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
-                }
-                
-                
-                else if(multiTiles[findFloor- gridSizeX].CompareTag("Floors"))
-                {
-                    
-                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
-                    
-                }
-                else if (multiTiles[findFloor- (gridSizeX*2)].CompareTag("Floors"))
-                {
-                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
-                }
-                else if (multiTiles[findFloor+ (gridSizeX*2)].CompareTag("Floors"))
-                {
-                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
-                }
-                
-
-                
-                
-                
-            }
-            else
-                enemyTot++;
-           
-        }
-
-    }
 
    
 
@@ -350,7 +291,8 @@ public class Floormaker : MonoBehaviour
 		BoardSetup();
 		DrunkWalk();
 		OuterWall();
-        Enemy1Spawner(enemyNum);
+       
+       
        
 
 			//InitialiseList();

@@ -193,6 +193,52 @@ public class Throw_Away_Functions : MonoBehaviour {
 */
 
 
+            //enemySpawner
+            /*
+    void Enemy1Spawner(int enemyTot)
+    {
+        
+        for(int i=0; i<enemyTot;i++)
+        {
+            findFloor = Random.Range(0, 625);
+            // multiTiles[findFloor] =  
+            if (multiTiles[findFloor].CompareTag("Floors"))
+            {
+                
+                
+                if(multiTiles[findFloor+gridSizeX].CompareTag("Floors"))
+                { 
+                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
+                }
+                
+                
+                else if(multiTiles[findFloor- gridSizeX].CompareTag("Floors"))
+                {
+                    
+                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
+                    
+                }
+                else if (multiTiles[findFloor- (gridSizeX*2)].CompareTag("Floors"))
+                {
+                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
+                }
+                else if (multiTiles[findFloor+ (gridSizeX*2)].CompareTag("Floors"))
+                {
+                    Instantiate (enemyPatrol[0],multiTiles[findFloor].transform.position, Quaternion.identity);
+                }
+                
+
+                
+                
+                
+            }
+            else
+                enemyTot++;
+           
+        }
+
+    }
+    */
 
 
 
