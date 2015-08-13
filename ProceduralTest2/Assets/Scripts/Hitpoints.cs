@@ -4,18 +4,19 @@ using System.Collections;
 public class Hitpoints : MonoBehaviour 
 {
 
-		public  int Hp =0;
-		public  float ivTimer = 0;
+		public  int hp;
+    public float ivTimer = 0;
+
+    
 
 		
 		 
 		// Use this for initialization
 		void Start ()
 		{
-			//initialize HP
-			 Hp = 5;
-	
-		}
+			//initialize hp
+        hp = 5;
+        }
 		
 		// Update is called once per frame
 		void Update ()
@@ -27,7 +28,7 @@ public class Hitpoints : MonoBehaviour
 			ivTimer -= Time.deltaTime;
 
 		}
-		if (Hp == 0) 
+		if (hp == 0) 
 		{
             gameObject.SetActive (false);
 		}	
@@ -39,31 +40,33 @@ public class Hitpoints : MonoBehaviour
 		
 
 
-	public  void LoseHipoints()
+	public void LoseHipoints()
 		{
+
 
 		if (ivTimer <= 0)
 		{
 			
-			--Hp;
+			--hp;
 			
-			Debug.Log ("Player HP: " +Hp);
+			Debug.Log ("Player hp: " +hp);
 			ivTimer = 1f;
 			
 		}
 			
 
 		//IVtimer 5 will make the invulnerability timer not work when set in inspector
-			if (ivTimer ==5)
+        if (ivTimer ==5)
 			{
 
-			--Hp;
-			Debug.Log ("HP: " +Hp);
+			--hp;
+			Debug.Log ("hp: " +hp);
 			}
 
 			
 		}
-	public  void OnCollisionEnter2D(Collision2D collision)
+
+	public virtual  void OnCollisionEnter2D(Collision2D collision)
 	{
 		//This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
 	
@@ -78,22 +81,27 @@ public class Hitpoints : MonoBehaviour
 
 	}
    
-    public  void OnCollisionStay2D(Collision2D collision)
+    public virtual  void OnCollisionStay2D(Collision2D collision)
     {
         //This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
         
-        if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player" )
         {
             
             return;
             
             
         }
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
         LoseHipoints();
         
     }
 
-//Since we use hitpoints script to change hitpoints on enemies through the use of the ontrigger option on the gameobjects being instantiated
+/*
+ * //Since we use hitpoints script to change hitpoints on enemies through the use of the ontrigger option on the gameobjects being instantiated
 public  void OnTriggerEnter2D(Collider2D collider)
 {
 	//This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
@@ -108,7 +116,7 @@ public  void OnTriggerEnter2D(Collider2D collider)
 	LoseHipoints();
 	
 }
-
-
+    */
 }
+
 	

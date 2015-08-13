@@ -6,6 +6,7 @@ public class Enemy_1 : EnemyMovement {
 
 	private Rigidbody2D E_1;
     private Transform E_1T;
+    Vector3 playerPOS;
 
     /*
     These Are the variables that we can use in this enemy+
@@ -32,9 +33,15 @@ public class Enemy_1 : EnemyMovement {
 	//checking if there is wall, and the enemy is facing the opposite direction
 	void FixedUpdate()
 	{
-       
-        Patrol();
-        Chase();
+        if(Player !=null){
+
+            Player = GameObject.FindGameObjectWithTag("Player");
+            playerPOS =  Player.transform.position;
+            Patrol();
+            Chase();
+
+        }
+
 
 
        
@@ -48,7 +55,7 @@ public class Enemy_1 : EnemyMovement {
     {
         
         //Dist is used to calculate the distance between the player and the enemy 
-        Dist = Vector2.Distance(transform.position, Player.position);
+        Dist = Vector2.Distance(transform.position, playerPOS);
         //if and only if dist is less than min distance I make the enemy lerp using the MoveTowords method. Its similar to lerp but has an extra argument in it to slow down the movement
         if (Dist < MinDist)
         {
@@ -58,7 +65,7 @@ public class Enemy_1 : EnemyMovement {
             
             
             
-            transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, maxSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerPOS, maxSpeed * Time.deltaTime);
             if(transform.position.x-Player.transform.position.x<0 || transform.position.x > Player.transform.position.x) Flip();
             
             
@@ -89,7 +96,7 @@ public class Enemy_1 : EnemyMovement {
        }
 
 
-	
+
 
     public override  void   OnCollisionEnter2D(Collision2D collider)
         

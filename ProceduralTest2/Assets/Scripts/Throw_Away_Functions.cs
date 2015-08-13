@@ -239,7 +239,22 @@ public class Throw_Away_Functions : MonoBehaviour {
 
     }
     */
+            /* public override  void OnCollisionStay2D(Collision2D collision)
+    { 
+            //This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
+            
+            if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy" )
+            {
+                
+                return;
+                
+                
+            }
+            
+            
+   }
 
+*/
 
 
 }

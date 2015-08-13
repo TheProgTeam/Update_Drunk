@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public float MaxDist = 10f;
     public float MinDist = 2f;
     public float Dist;
-    public Transform Player;
+    public GameObject Player;
 
 
 	//The Flip function inverts the value of isfacingright bool and then flips the transform of the enemy
@@ -41,15 +41,26 @@ public class EnemyMovement : MonoBehaviour
     public virtual void  OnCollisionEnter2D(Collision2D collider)
         
     {
-        if (collider.collider.tag == "Walls")
+        if (collider.collider.tag == "Walls" ||collider.collider.tag == "Enemy")
         {
             Flip();
             
         }
+   
         
         
     }
 
-	
+    public virtual  void OnCollisionStay2D(Collision2D collider)
+    {
+        if (collider.collider.tag == "Walls" ||collider.collider.tag == "Enemy")
+        {
+            Flip();
+            
+        }
+
+
+
+    }
 }
 

@@ -11,12 +11,22 @@ public class Spawner : MonoBehaviour {
     public List <GameObject> enemyRand = new List <GameObject> ();
 
 
+    //Made the Private int accesible in the inspector so that we could modify ammount of enemies spawn
+    [SerializeField]
     private int enemyNum = 2;
     private int findFloor;
     public GameObject Player;
 
    
+
+
    
+   void Awake()
+    {
+
+        PlayerSpawner();
+
+    }
 
 
 
@@ -26,12 +36,17 @@ public class Spawner : MonoBehaviour {
 
        
         Enemy1Spawner(enemyNum);
-        PlayerSpawner();
+
        
 
 	}
+
+
     void Update()
     {
+
+
+       
 
     }
 	

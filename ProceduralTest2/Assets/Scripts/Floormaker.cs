@@ -121,9 +121,9 @@ public class Floormaker : MonoBehaviour
 
 	void DrunkWalk()
 	{
-        //Destroy(multiTiles [0]);
-       // GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
-       // multiTiles[CURRENT_CASE] =(Instantiate (toInstantiate2,multiTiles[0].transform.position , Quaternion.identity) as GameObject);
+        Destroy(multiTiles [0]);
+        GameObject toInstantiate2 = floorPrefabTiles[(Random.Range(0,floorPrefabTiles.Length))];
+        multiTiles[CURRENT_CASE] =(Instantiate (toInstantiate2,multiTiles[0].transform.position , Quaternion.identity) as GameObject);
 
 
 		
@@ -273,16 +273,6 @@ public class Floormaker : MonoBehaviour
 	}
 
 
-
-
-
-
-
-
-   
-
-
-
 	void Awake ()
 	{	
         randtileAmount = Random.Range(1500,2000);
@@ -294,14 +284,7 @@ public class Floormaker : MonoBehaviour
        
        
        
-
-			//InitialiseList();
-			
-			 
-
-
-
-	}
+    }
 
 	void Start()
 	{
