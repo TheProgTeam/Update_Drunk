@@ -44,7 +44,7 @@ public class Hitpoints : MonoBehaviour
 		{
 
 
-		if (ivTimer <= 0)
+		if (ivTimer <= 0.5f)
 		{
 			
 			--hp;
@@ -76,7 +76,10 @@ public class Hitpoints : MonoBehaviour
 			return;
 
 		
-		}
+        } if(collision.gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
 		LoseHipoints();
 
 	}
@@ -92,7 +95,7 @@ public class Hitpoints : MonoBehaviour
             
             
         }
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Enemy")&& (this.gameObject.tag =="Enemy"))
         {
             return;
         }
