@@ -7,6 +7,8 @@ public class Enemy_1 : EnemyMovement {
 	private Rigidbody2D E_1;
     private Transform E_1T;
     Vector3 playerPOS;
+    [SerializeField]
+    private GameObject[] bulletPrefaber;
 
     /*
     These Are the variables that we can use in this enemy+
@@ -40,7 +42,27 @@ public class Enemy_1 : EnemyMovement {
             Patrol();
             Chase();
 
+           float Distenemyplayer = Vector3.Distance(playerPOS, this.transform.position);
+
+            if (Distenemyplayer < 5)
+            {
+                 GameObject bullet0 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
+                 GameObject bullet1 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
+                 GameObject bullet2 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
+
+                bullet0.
+
+
+
+
+            }
+
+
+
+
+
         }
+
 
 
 

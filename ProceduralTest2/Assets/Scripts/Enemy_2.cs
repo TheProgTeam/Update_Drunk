@@ -5,7 +5,7 @@ public class Enemy_2 : EnemyMovement
 {
 
      private Rigidbody2D E_2;
-
+       
 
    
 
@@ -145,6 +145,8 @@ public class Enemy_2 : EnemyMovement
             
         }
 
+
+
     }
 	
 
@@ -162,6 +164,16 @@ public class Enemy_2 : EnemyMovement
 
 	}
 
+    void FixedUpdate()
+    {
+
+
+
+
+
+
+
+    }
 
 
 

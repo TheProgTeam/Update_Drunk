@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
         
         
     }
-
+    /*
     public virtual  void OnCollisionStay2D(Collision2D collider)
     {
         if (collider.collider.tag == "Walls" ||collider.collider.tag == "Enemy")
@@ -62,5 +62,6 @@ public class EnemyMovement : MonoBehaviour
 
 
     }
+    */
 }
 

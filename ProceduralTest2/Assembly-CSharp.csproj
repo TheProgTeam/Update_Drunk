@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyLerp.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyShoot.cs" />
      <Compile Include="Assets\Scripts\Enemy_1.cs" />
      <Compile Include="Assets\Scripts\Enemy_2.cs" />
      <Compile Include="Assets\Scripts\Floormaker.cs" />
