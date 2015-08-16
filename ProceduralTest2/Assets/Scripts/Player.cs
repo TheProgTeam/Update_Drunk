@@ -5,19 +5,19 @@ using System.Collections;
 
 namespace Scripts
 {
-public class Player : MonoBehaviour
+public class Player : PlayerShooting
 	{
-		private Transform Current_Pos;
+		//private Transform Current_Pos;
 		//public GameObject [] weapon;
 		private Rigidbody2D Pl2D;
-		public GameObject[] bulletPrefab1;
+       
 		//public Vector3 Dir;
 
 
 
 		void Start()
 		{
-			Current_Pos = GetComponent<Transform>();
+			//Current_Pos = GetComponent<Transform>();
 			Pl2D = GetComponent <Rigidbody2D> ();
 			//Instantiate (weapon[0],Current_Pos.position, Quaternion.identity);
 
@@ -34,8 +34,8 @@ public class Player : MonoBehaviour
 			    {
 
 				//GameObject toInstantiate2 = bulletPrefab1[0];
-				Instantiate (bulletPrefab1[0],Current_Pos.position, Quaternion.identity);
-
+				
+             
 
 				//Pl2D.AddForce (Dir*200);
 			}

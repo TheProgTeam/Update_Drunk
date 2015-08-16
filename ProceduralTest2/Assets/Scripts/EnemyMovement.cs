@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : EnemyShoot
 {
 	//In order not to see these variables in the children of enemy movement I used the following
 	[HideInInspector]

@@ -10,6 +10,8 @@ public class Enemy_1 : EnemyMovement {
     [SerializeField]
     private GameObject[] bulletPrefaber;
 
+ 
+
     /*
     These Are the variables that we can use in this enemy+
     
@@ -27,6 +29,7 @@ public class Enemy_1 : EnemyMovement {
 	{
        
 		E_1 = GetComponent<Rigidbody2D> ();
+
         //E_1T = GetComponent<Transform> ();
 
 
@@ -41,21 +44,6 @@ public class Enemy_1 : EnemyMovement {
             playerPOS =  Player.transform.position;
             Patrol();
             Chase();
-
-           float Distenemyplayer = Vector3.Distance(playerPOS, this.transform.position);
-
-            if (Distenemyplayer < 5)
-            {
-                 GameObject bullet0 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
-                 GameObject bullet1 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
-                 GameObject bullet2 = Instantiate (bulletPrefaber[0],this.transform.position, Quaternion.identity);
-
-                bullet0.
-
-
-
-
-            }
 
 
 
@@ -120,7 +108,7 @@ public class Enemy_1 : EnemyMovement {
 
 
 
-    public override  void   OnCollisionEnter2D(Collision2D collider)
+    public override void   OnCollisionEnter2D(Collision2D collider)
         
     {
         if (collider.collider.tag == "Walls" || collider.collider.tag == "Player"||collider.collider.tag == "Enemy")
@@ -128,7 +116,7 @@ public class Enemy_1 : EnemyMovement {
             Flip();
             
         }
-        
+       
         
     }
    

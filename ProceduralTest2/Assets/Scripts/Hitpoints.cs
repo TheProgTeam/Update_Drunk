@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Hitpoints : MonoBehaviour 
 {
-
-		public  int hp;
+    [SerializeField]
+		private  int hp;
     public float ivTimer = 0;
 
     
@@ -15,7 +15,7 @@ public class Hitpoints : MonoBehaviour
 		void Start ()
 		{
 			//initialize hp
-        hp = 5;
+       
         }
 		
 		// Update is called once per frame
@@ -66,7 +66,7 @@ public class Hitpoints : MonoBehaviour
 			
 		}
 
-	public virtual  void OnCollisionEnter2D(Collision2D collision)
+	public void OnCollisionEnter2D(Collision2D collision)
 	{
 		//This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
 	
@@ -80,11 +80,16 @@ public class Hitpoints : MonoBehaviour
         {
             return;
         }
-		LoseHipoints();
+        if(collision.gameObject.tag == "Bullet")
+        {
+            return;
+        }
+        LoseHipoints();
+
 
 	}
    
-    public virtual  void OnCollisionStay2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         //This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
         
@@ -99,6 +104,8 @@ public class Hitpoints : MonoBehaviour
         {
             return;
         }
+
+         
         LoseHipoints();
         
     }
