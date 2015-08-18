@@ -15,6 +15,7 @@ public class PlayerShooting : MonoBehaviour {
         public Vector3 Current_pos;
         public Vector3 dir;
        private GameObject bulletMade;
+        private float bulleOffset;
 
 	
 	
@@ -50,7 +51,7 @@ public class PlayerShooting : MonoBehaviour {
 
                 MakeBullet();
                 StraightShooting();
-                
+
                 //Pl2D.AddForce (Dir*200);
             }
 
@@ -65,8 +66,8 @@ public class PlayerShooting : MonoBehaviour {
         {   
             Vector3 Starting_Pos = Camera.main.WorldToScreenPoint(transform.position);
             Vector3 dir = (Input.mousePosition - Starting_Pos).normalized;
-            Vector3 DirectionAngle = new Vector3 (Mathf.Cos(30),Mathf.Sin(30),0);
-            bulletMade.GetComponent<Rigidbody2D>().AddForce(DirectionAngle*500);
+            //Vector3 DirectionAngle = new Vector3 (Mathf.Cos(30),Mathf.Sin(30),0);
+            bulletMade.GetComponent<Rigidbody2D>().AddForce(dir*500);
            
            
 
@@ -94,7 +95,6 @@ public void SpreadShooting()
            
 
         }
-
 
 	//Get Bullet path from Player script "Fire1" Button
 	public void Trajectory()

@@ -49,7 +49,7 @@ public class Hitpoints : MonoBehaviour
 			
 			--hp;
 			
-			Debug.Log ("Player hp: " +hp);
+			Debug.Log ("PLAYER HP: " +hp);
 			ivTimer = 1f;
 			
 		}
@@ -60,7 +60,7 @@ public class Hitpoints : MonoBehaviour
 			{
 
 			--hp;
-			Debug.Log ("hp: " +hp);
+			Debug.Log ("ENEMY HP: " +hp);
 			}
 
 			
@@ -70,20 +70,10 @@ public class Hitpoints : MonoBehaviour
 	{
 		//This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
 	
-			if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player")
-		{
-	
-			return;
-
-		
-        } if(collision.gameObject.CompareTag("Enemy"))
-        {
-            return;
-        }
-        if(collision.gameObject.tag == "Bullet")
-        {
-            return;
-        }
+        if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player")return;
+        if(collision.gameObject.CompareTag("Enemy")) return;
+        
+      
         LoseHipoints();
 
 
@@ -93,20 +83,12 @@ public class Hitpoints : MonoBehaviour
     {
         //This makes sure that gameobject does not lose hp from walls and to make sure that the enemies don't lose hp from hitting player
         
-        if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player" )
-        {
-            
-            return;
-            
-            
-        }
-        if(collision.gameObject.CompareTag("Enemy")&& (this.gameObject.tag =="Enemy"))
-        {
-            return;
-        }
+       if(collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player" ) return;
+       if(collision.gameObject.CompareTag("Enemy")&& (this.gameObject.tag =="Enemy")) return;
 
-         
-        LoseHipoints();
+       
+      LoseHipoints();
+       
         
     }
 

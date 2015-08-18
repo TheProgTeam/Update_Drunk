@@ -7,8 +7,11 @@ public class Enemy_1 : EnemyMovement {
 	private Rigidbody2D E_1;
     private Transform E_1T;
     Vector3 playerPOS;
+    bool checkLeftFlip = true;
+    bool checkRightFlip = true;
     [SerializeField]
     private GameObject[] bulletPrefaber;
+
 
  
 
@@ -36,7 +39,7 @@ public class Enemy_1 : EnemyMovement {
 	}
 
 	//checking if there is wall, and the enemy is facing the opposite direction
-	void FixedUpdate()
+	void Update()
 	{
         if(Player !=null){
 
@@ -75,12 +78,24 @@ public class Enemy_1 : EnemyMovement {
             
             
             
-            transform.position = Vector2.MoveTowards(transform.position, playerPOS, maxSpeed * Time.deltaTime);
-            if(transform.position.x-Player.transform.position.x<0 || transform.position.x > Player.transform.position.x) Flip();
+            transform.position = Vector2.Lerp(transform.position, playerPOS, maxSpeed * Time.deltaTime);
+           //if(transform.position.x-Player.transform.position.x<0 || transform.position.x > Player.transform.position.x) 
             
             
             
         }
+            if(Player.transform.position.x > transform.position.x && checkLeftFlip == true)
+                {
+                    Flip();
+                    checkRightFlip = true;
+                    checkLeftFlip =false;
+                }
+            if(Player.transform.position.x < transform.position.x && checkRightFlip == true)
+                {
+                    Flip();
+                    checkLeftFlip=true;
+                    checkRightFlip=false;
+                }
     }
     }
     
@@ -111,7 +126,7 @@ public class Enemy_1 : EnemyMovement {
     public override void   OnCollisionEnter2D(Collision2D collider)
         
     {
-        if (collider.collider.tag == "Walls" || collider.collider.tag == "Player"||collider.collider.tag == "Enemy")
+        if (collider.collider.tag == "Walls" ||collider.collider.tag == "Enemy")
         {
             Flip();
             

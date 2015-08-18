@@ -50,18 +50,8 @@ public class EnemyMovement : EnemyShoot
         
         
     }
-    /*
-    public virtual  void OnCollisionStay2D(Collision2D collider)
-    {
-        if (collider.collider.tag == "Walls" ||collider.collider.tag == "Enemy")
-        {
-            Flip();
-            
-        }
 
 
 
-    }
-    */
 }
 
