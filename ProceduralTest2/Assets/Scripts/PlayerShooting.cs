@@ -16,6 +16,8 @@ public class PlayerShooting : MonoBehaviour {
         public Vector3 dir;
        private GameObject bulletMade;
         private float bulleOffset;
+        private bool P = true;
+        private bool S = false;
 
 	
 	
@@ -42,20 +44,60 @@ public class PlayerShooting : MonoBehaviour {
 	void Update() 
         {
 
+            if(Input.GetKey("1") )
+            {
+                P= true;
+                S= false;
+
+
+
+            }
+            if(Input.GetKey("2"))
+            {
+
+                S= true;
+                P = false;
+
+
+            }
+           
 
             Current_pos = Camera.main.WorldToScreenPoint(transform.position);
+
+            if (P)
+
+            {
             if (Input.GetButtonDown("Fire1"))
             {
-                
+                    
                 //GameObject toInstantiate2 = bulletPrefab1[0];
 
-                MakeBullet();
-                StraightShooting();
+               
+               StraightShooting();
+                
 
                 //Pl2D.AddForce (Dir*200);
             }
 
+            }
 
+            if(S)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    
+                    //GameObject toInstantiate2 = bulletPrefab1[0];
+                    
+                    
+                    SpreadShooting();
+                    
+                    
+                    //Pl2D.AddForce (Dir*200);
+                }
+
+
+
+            }
            
 
 			
@@ -64,6 +106,7 @@ public class PlayerShooting : MonoBehaviour {
 
  public void StraightShooting()
         {   
+            MakeBullet();
             Vector3 Starting_Pos = Camera.main.WorldToScreenPoint(transform.position);
             Vector3 dir = (Input.mousePosition - Starting_Pos).normalized;
             //Vector3 DirectionAngle = new Vector3 (Mathf.Cos(30),Mathf.Sin(30),0);
@@ -75,13 +118,21 @@ public class PlayerShooting : MonoBehaviour {
 
 public void SpreadShooting()
         {
+            MakeBullet();
+            Vector3 Starting_Pos = Camera.main.WorldToScreenPoint(transform.position);
+            Vector3 dir = (Input.mousePosition - Starting_Pos).normalized;
+           
+            bulletMade.GetComponent<Rigidbody2D>().AddForce(dir*500);
 
             MakeBullet();
-            StraightShooting();
-            MakeBullet();
-            StraightShooting();
-            MakeBullet();
-            StraightShooting();
+            Vector3 DirectionAngle = new Vector3 ( (dir.x+Mathf.Cos(5)), dir.y+Mathf.Sin(5)).normalized;
+            bulletMade.GetComponent<Rigidbody2D>().AddForce(500*DirectionAngle);
+           MakeBullet();
+            Vector3 DirectionAngle1 = new Vector3 (Mathf.Cos(-5)+dir.x, dir.y+Mathf.Sin(-5),0).normalized;
+            bulletMade.GetComponent<Rigidbody2D>().AddForce(DirectionAngle1*500);
+
+
+
         }
 
  public void MakeBullet()
