@@ -7,4 +7,10 @@ public class BulletDestroyer : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    void Update()
+    {
+        Destroy(gameObject,0.6f);
+            
+    }
 }

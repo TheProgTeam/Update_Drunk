@@ -88,13 +88,16 @@ public class Enemy_1 : EnemyMovement {
                 {
                     Flip();
                     checkRightFlip = true;
-                    checkLeftFlip =false;
+                    isFacingRight = true;
+                    
+
                 }
             if(Player.transform.position.x < transform.position.x && checkRightFlip == true)
                 {
                     Flip();
                     checkLeftFlip=true;
-                    checkRightFlip=false;
+                    isFacingRight = false;
+                    
                 }
     }
     }
