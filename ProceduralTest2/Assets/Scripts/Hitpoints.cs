@@ -28,7 +28,7 @@ public class Hitpoints : MonoBehaviour
 			ivTimer -= Time.deltaTime;
 
 		}
-		if (hp == 0) 
+		if (hp <= 0) 
 		{
             gameObject.SetActive (false);
 		}	
