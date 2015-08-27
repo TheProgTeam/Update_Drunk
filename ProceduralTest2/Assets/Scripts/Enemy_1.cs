@@ -11,7 +11,8 @@ public class Enemy_1 : EnemyMovement {
     bool checkRightFlip = true;
     [SerializeField]
     private GameObject[] bulletPrefaber;
-
+    float playerpospre;
+    float enemypospre;
 
  
 
@@ -46,7 +47,8 @@ public class Enemy_1 : EnemyMovement {
             Player = GameObject.FindGameObjectWithTag("Player");
             playerPOS =  Player.transform.position;
             Patrol();
-            Chase();
+            //Chase();
+           
 
 
 
@@ -69,6 +71,7 @@ public class Enemy_1 : EnemyMovement {
         
         //Dist is used to calculate the distance between the player and the enemy 
         Dist = Vector2.Distance(transform.position, playerPOS);
+        Dist = Mathf.Round(Dist*100f)/100f;
         //if and only if dist is less than min distance I make the enemy lerp using the MoveTowords method. Its similar to lerp but has an extra argument in it to slow down the movement
         if (Dist < MinDist)
         {
@@ -76,7 +79,7 @@ public class Enemy_1 : EnemyMovement {
                     (Player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
                 transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);*/
             
-            
+            //Flip();
             
             transform.position = Vector2.Lerp(transform.position, playerPOS, maxSpeed * Time.deltaTime);
            //if(transform.position.x-Player.transform.position.x<0 || transform.position.x > Player.transform.position.x) 
@@ -84,20 +87,44 @@ public class Enemy_1 : EnemyMovement {
             
             
         }
-            if(Player.transform.position.x > transform.position.x && checkLeftFlip == true)
+            playerpospre= Mathf.Round(Player.transform.position.x*100f)/100f;
+            enemypospre = Mathf.Round(transform.position.x *100f)/100f;
+            if(playerpospre >= enemypospre && !isFacingRight )
+                {
+                    Flip();
+                    
+                }
+            if( playerpospre <= enemypospre && isFacingRight == true)
+                {
+                    Flip();
+                   
+                }
+
+    }
+    }
+
+
+    /*
+     * 
+     * if(Player.transform.position.x >= transform.position.x && checkLeftFlip == true)
                 {
                     Flip();
                     checkRightFlip = true;
                     checkLeftFlip =false;
                 }
-            if(Player.transform.position.x < transform.position.x && checkRightFlip == true)
+            if(Player.transform.position.x <= transform.position.x && checkRightFlip == true)
                 {
                     Flip();
                     checkLeftFlip=true;
                     checkRightFlip=false;
                 }
-    }
-    }
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * */
     
 
     //new Vector2(transform.position.x, transform.position.y)
@@ -118,6 +145,8 @@ public class Enemy_1 : EnemyMovement {
 
 
 		    }
+        Chase();
+
        }
 
 
