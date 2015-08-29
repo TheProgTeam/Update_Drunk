@@ -1,0 +1,214 @@
+Mono path[0] = 'C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Test_er_Data/Managed'
+Mono path[1] = 'C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Test_er_Data/Mono'
+Mono config path = 'C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Test_er_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Test_er_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55449
+Multi-casting "[IP] 192.168.1.120 [Port] 55449 [Flags] 2 [Guid] 1271266074 [EditorId] 2635944771 [Version] 1048832 [Id] WindowsPlayer(Chris) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.120:55449]
+Initialize engine version: 5.1.0f3 (ec70b008569d)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780 (ID=0x1004)
+    Vendor:   NVIDIA
+    VRAM:     2997 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.105 seconds
+desktop: 2560x1440 59Hz; virtual: 4480x1440 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Test_er_Data\Managed\System.dll (this message is harmless)
+Random Tile Amount: 1875
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Floormaker:Awake() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Floormaker.cs:279)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Floormaker.cs Line: 279)
+
+0.1542515
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Scripts.PlayerShooting:Start() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\PlayerShooting.cs:39)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/PlayerShooting.cs Line: 39)
+
+ENEMY HP: 4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 3
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+PLAYER HP: 14
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:52)
+Hitpoints:OnCollisionStay2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:90)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 52)
+
+ENEMY HP: 4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 3
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionStay2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:90)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 3
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 3
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
+ENEMY HP: 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Hitpoints:LoseHipoints() (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:63)
+Hitpoints:OnCollisionEnter2D(Collision2D) (at C:\Users\Christopher\Documents\GitHub\Update_Drunk\ProceduralTest2\Assets\Scripts\Hitpoints.cs:77)
+ 
+(Filename: C:/Users/Christopher/Documents/GitHub/Update_Drunk/ProceduralTest2/Assets/Scripts/Hitpoints.cs Line: 63)
+
