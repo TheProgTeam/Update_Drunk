@@ -18,12 +18,15 @@ public class PlayerShooting : MonoBehaviour {
         private float bulleOffset;
         private bool P = true;
         private bool S = false;
+        private bool SMG = false;
+
 
         public Rigidbody2D pelledPrefab;
         float pelletSpeed = 150f;
         int pellentCount = 5;
         float spreadFactor = 0.01f;
         float fireRate = 0.5f;
+        float fireRateSMG = 0.15f;
         private float nextFire = 0.0f;
 	
 	
@@ -54,7 +57,7 @@ public class PlayerShooting : MonoBehaviour {
             {
                 P= true;
                 S= false;
-
+                SMG = false;
 
 
             }
@@ -63,9 +66,18 @@ public class PlayerShooting : MonoBehaviour {
 
                 S= true;
                 P = false;
+                SMG = false;
+
 
 
             }
+            if(Input.GetKey("3"))
+            {
+                S= false;
+                P = false;
+                SMG = true;
+            }
+            
            
 
             Current_pos = Camera.main.WorldToScreenPoint(transform.position);
@@ -102,6 +114,22 @@ public class PlayerShooting : MonoBehaviour {
                     //Pl2D.AddForce (Dir*200);
                 }
 
+
+
+            }
+            if(SMG)
+            {
+                if(Input.GetButton("Fire1") && Time.time > nextFire)
+                {
+                    
+
+                    
+                    
+                    StraightShooting();
+                    nextFire = Time.time +fireRateSMG;
+                    
+                   
+                }
 
 
             }
@@ -153,10 +181,22 @@ public void Shotgun()
 
 
             }
+        }
+
+
+public void AutomaticFire()
+        {
+            {
+
+                MakeBullet();
+                Vector3 Starting_Pos = Camera.main.WorldToScreenPoint(transform.position);
+                Vector3 dir = (Input.mousePosition - Starting_Pos).normalized;
+                //Vector3 DirectionAngle = new Vector3 (Mathf.Cos(30),Mathf.Sin(30),0);
+                bulletMade.GetComponent<Rigidbody2D>().AddForce(dir*500);
 
 
 
-
+            }
 
 
 
@@ -183,14 +223,14 @@ public void Shotgun()
 
 
 		*/
+    }
 
-
-
-	}
 
 	
 
-
-    }
-
+	
 }
+}
+    
+
+
