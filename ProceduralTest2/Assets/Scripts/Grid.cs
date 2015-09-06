@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 public class Grid : MonoBehaviour {
 
+    public bool onlyDisplayPathGizmos;
     //for testing purposes
     public Transform player;
     
@@ -29,6 +30,13 @@ void Start(){
 
     }
 
+    public int MaxSize{
+
+        get{
+            return gridSizeX*gridSizeY;
+        }
+    }
+
     void CreateGrid()
     {
 
@@ -43,7 +51,7 @@ void Start(){
                 //In Order for this bool to be triggered objects must be put in before runtime. Doesn't Update
                 bool walkable = !Physics2D.OverlapCircle(worldPoint,nodeRadius,unwalkableMask);
 
-                grid[x,y] = new Node(walkable,worldPoint);
+                grid[x,y] = new Node(walkable,worldPoint,x,y);
 
 
               
@@ -53,6 +61,46 @@ void Start(){
 
 
     }
+
+    public List<Node> GetNeighbours (Node node)
+    {
+        List<Node> neighbours = new List<Node>();
+
+        for (int x = -1; x<=1; x++)
+        {
+            for (int y = -1; y<=1; y++)
+            {
+                //we want to skip the middle node
+                if(x==0 && y==0)
+                {
+                    continue;
+                }
+
+                int checkX = node.gridX +x;
+                int checkY = node.gridY +y;
+
+
+                if(checkX >= 0 && checkX< gridSizeX && checkY >= 0 && checkY < gridSizeY)
+                {
+                    neighbours.Add(grid[checkX,checkY]);
+
+
+                }
+            
+            
+            }
+           
+
+        }
+
+        return neighbours;
+
+
+    }
+
+
+
+
     public Node NodeFromWorldPoint (Vector2 worldPosition)
     {
         float percentX = (worldPosition.x +gridWorldSize.x/2)/gridWorldSize.x;
@@ -72,11 +120,35 @@ void Start(){
 
     }
 
+
+    public List<Node> path;
+
 //At the moment this method show us 
 void OnDrawGizmos(){
 
         Gizmos.DrawWireCube(transform.position, new Vector2(gridWorldSize.x,gridWorldSize.y));
 
+        if(onlyDisplayPathGizmos)
+        {
+            if(path!= null)
+            {
+                foreach (Node n in path)
+                {
+                    Gizmos.color = Color.black;
+                    Gizmos.DrawCube(n.worldPosistion, Vector2.one * (nodeDiameter - .1f));
+                }
+
+
+
+            }
+        }
+
+
+       else{
+        
+        
+        
+        
         if (grid != null)
         { 
             Node playerNode = NodeFromWorldPoint(player.position);
@@ -86,14 +158,21 @@ void OnDrawGizmos(){
                
 
                 Gizmos.color = (n.walkable)?Color.white:Color.red;
-                if(playerNode ==n){
+                /*if(playerNode ==n){
                     Gizmos.color = Color.cyan;
                 }
+                */
+                if (path!=null)
+                    if (path.Contains(n))
+                        Gizmos.color = Color.black;
+
+                
                 Gizmos.DrawCube(n.worldPosistion, Vector2.one * (nodeDiameter - .1f));
 
             }
         }
+        }
     }
 
+    }
 
-}

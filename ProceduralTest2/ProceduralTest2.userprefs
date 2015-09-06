@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Grid.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Heap.cs">
     <Files>
-      <File FileName="Assets\Scripts\Astar Psuedo.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\Pathfinding.cs" Line="63" Column="17" />
+      <File FileName="Assets\Scripts\Astar Psuedo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy_1.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Floormaker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Grid.cs" Line="43" Column="111" />
-      <File FileName="Assets\Scripts\Node.cs" Line="14" Column="9" />
+      <File FileName="Assets\Scripts\Grid.cs" Line="67" Column="36" />
+      <File FileName="Assets\Scripts\Node.cs" Line="43" Column="10" />
+      <File FileName="Assets\Scripts\Heap.cs" Line="75" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
